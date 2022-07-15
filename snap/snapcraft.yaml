@@ -1,0 +1,28 @@
+name: photo-hash
+version: 0.1.0
+summary: AsciiArt app
+description: Convert images to text and images asciiart
+
+confinement: strict
+base: core18
+grade: stable
+
+slots:
+  photo-hash: # adjust accordingly to your app name
+    interface: dbus
+    bus: session
+    name: org.bar.Photo_Hash # adjust accordingly to your app name and
+    
+apps:
+  photo-hash:
+    command: photohash
+    extensions: [flutter-master] # Where "master" defines which Flutter channel to use for the build
+    plugs:
+    - network
+    slots:
+      - dbus-super-cool-app
+parts:
+  photo-hash:
+    source: .
+    plugin: flutter
+    flutter-target: lib/main.dart # The main entry-point file of the application

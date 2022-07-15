@@ -1,0 +1,8 @@
+  [Desktop Entry]
+  Name=Photo Hash
+  Comment=Convert images to text and images asciiart
+  Exec=photohash
+  Icon=${SNAP}/meta/gui/photo_hash.png # replace name to your app name
+  Terminal=false
+  Type=Application
+  Categories=Photo Edting; #adjust accordingly your snap category
