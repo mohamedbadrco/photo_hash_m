@@ -11,7 +11,7 @@ slots:
   photo-hash: # adjust accordingly to your app name
     interface: dbus
     bus: session
-    name: org.bar.Photo_Hash # adjust accordingly to your app name and
+    name: org.bar.photo_hash # adjust accordingly to your app name and
     
 apps:
   photo-hash:
@@ -20,7 +20,7 @@ apps:
     plugs:
     - network
     slots:
-      - dbus-super-cool-app
+      - dbus-photo-hash
 parts:
   photo-hash:
     source: .
