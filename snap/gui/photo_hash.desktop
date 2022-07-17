@@ -1,7 +1,7 @@
   [Desktop Entry]
   Name=Photo Hash
   Comment=Convert images to text and images asciiart
-  Exec=photohash
+  Exec=photo_hash
   Icon=${SNAP}/meta/gui/photo_hash.png # replace name to your app name
   Terminal=false
   Type=Application
