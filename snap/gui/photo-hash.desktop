@@ -1,8 +1,8 @@
-  [Desktop Entry]
-  Name=Photo Hash
-  Comment=Convert images to text and images asciiart
-  Exec=photo-hash
-  Icon=${SNAP}/meta/gui/photo-hash.png
-  Terminal=false
-  Type=Application
-  Categories=photo-editing;
+[Desktop Entry]
+Name=Photo Hash
+Comment=Convert images to text and images asciiart
+Exec=photo-hash
+Icon=${SNAP}/meta/gui/photo-hash.png
+Terminal=false
+Type=Application
+Categories=photo-editing;
