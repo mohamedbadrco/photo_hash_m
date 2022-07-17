@@ -15,7 +15,7 @@ slots:
     
 apps:
   photo-hash:
-    command: photohash
+    command: photo_hash
     extensions: [flutter-master] # Where "master" defines which Flutter channel to use for the build
     plugs:
     - network
