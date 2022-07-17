@@ -26,3 +26,8 @@ parts:
     source: .
     plugin: flutter
     flutter-target: lib/main.dart # The main entry-point file of the application
+    
+architectures:
+  - build-on: arm64
+  - build-on: amd64
+  
