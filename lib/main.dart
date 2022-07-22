@@ -750,6 +750,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+  
+  
+  
+    TextStyle defaultStyle =
+        const TextStyle(color: Color(0xffE8EAED), fontSize: 16.0);
+    TextStyle linkStyle = const TextStyle(color: Color(0xff8AB4F8));
+	
     var typeList = typemap.keys
         .toList()
         .map<ChoiceChip>(
@@ -833,9 +840,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ))
         .toList();
 
-    TextStyle defaultStyle =
-        const TextStyle(color: Colors.grey, fontSize: 16.0);
-    TextStyle linkStyle = const TextStyle(color: Colors.blue);
 
     var links1 = Container(
         margin: const EdgeInsets.all(5.0),
@@ -1061,10 +1065,8 @@ Enter the number of columns or the number of charctars per
         margin: const EdgeInsets.all(5.0),
         padding: const EdgeInsets.all(40.0),
         child: const Text(
-            '''Photo Hash is an app for making ascii art form images 
-		Pick an image  choose output type image/text apply filters
-		an then review the results ''',
-            style: TextStyle(color: Colors.grey, fontSize: 18.0)),
+            '''Photo Hash is an app for making ascii art form images Pick an image  choose output type image/text apply filters an then review the results ''',
+            style: TextStyle(color: Color(0xffE8EAED), fontSize: 20.0)),
       ),
       const Spacer(),
       Column(
@@ -1171,7 +1173,7 @@ Enter the number of columns or the number of charctars per
     );
 
     return Scaffold(
-      backgroundColor: const Color(0xffADD8E6),
+      backgroundColor: const Color(0xffF8F9FA),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -1182,14 +1184,14 @@ Enter the number of columns or the number of charctars per
                   width: double.infinity,
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: Color(0xff708090)),
+                      color: Color(0xffE8EAED)),
                   height: 70.0,
                   child: Row(
                     children: const [
                       Text(
                         "#PHOTO HASH",
                         style: TextStyle(
-                            color: Colors.white,
+                            color: Color(0xff8AB4F8),
                             fontSize: 26,
                             letterSpacing: 2,
                             fontWeight: FontWeight.bold),
@@ -1206,7 +1208,7 @@ Enter the number of columns or the number of charctars per
                         decoration: BoxDecoration(
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(25)),
-                            color: Colors.black.withOpacity(0.6)),
+                            color: const Color(0xff22273E).withOpacity(0.7)),
                         child: SizedBox(
                           width: double.infinity,
                           child: Expanded(
