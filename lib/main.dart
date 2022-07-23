@@ -1057,7 +1057,6 @@ Enter the number of columns or the number of charctars per
           ),
           links1,
           goback,
-          
         ]));
 
     var home = Column(children: [
@@ -1213,122 +1212,124 @@ Enter the number of columns or the number of charctars per
                         borderRadius:
                             const BorderRadius.all(Radius.circular(25)),
                         color: const Color(0xff22273E).withOpacity(0.7)),
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width,
-                      child: imagebytes == null
-                          ? SizedBox(
-                              height: MediaQuery.of(context).size.height - 90,
-                              child: done == false ? home : mesgtxt)
-                          : Column(
-                              children: [
-                                Container(
-                                  width: MediaQuery.of(context).size.width,
-                                ),
-                                Container(
-                                    child: prograss == false
-                                        ? Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Image.memory(
-                                                imagebytes!,
-                                                width: MediaQuery.of(context)
-                                                    .size
-                                                    .width,
-                                                alignment: Alignment.center,
-                                              ),
-                                              Container(
-                                                child: done == false
-                                                    ? Column(
-                                                        children: [
-                                                          change,
-                                                          Column(
-                                                            children: [
-                                                              // ignore: prefer_const_constructors
-                                                              Text(
-                                                                "output type",
-                                                                style: const TextStyle(
-                                                                    color: Colors
-                                                                        .white60,
-                                                                    fontSize:
-                                                                        16,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold),
-                                                              ),
-                                                              Wrap(
-                                                                spacing: 3,
-                                                                runSpacing: 3,
-                                                                children:
-                                                                    typeList,
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          namefiled,
-                                                          Container(
-                                                              child:
-                                                                  typemap['image'] ==
-                                                                          true
-                                                                      ? imageob
-                                                                      : txtob),
-                                                          Container(
-                                                              child: _controller
-                                                                      .value
-                                                                      .text
-                                                                      .isNotEmpty
-                                                                  ? convert
-                                                                  : Text(
-                                                                      'please enter a name',
-                                                                      style:
-                                                                          defaultStyle,
-                                                                    ))
-                                                        ],
-                                                      )
-                                                    : //
-                                                    mesgimg,
-                                              ),
-                                            ],
-                                          )
-                                        : //
-                                        SizedBox(
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height -
-                                                90,
-                                            child: Center(
-                                                child: Column(
+                    child: Expanded(
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        child: imagebytes == null
+                            ? SizedBox(
+                                height: MediaQuery.of(context).size.height - 90,
+                                child: done == false ? home : mesgtxt)
+                            : Column(
+                                children: [
+                                  Container(
+                                    width: MediaQuery.of(context).size.width,
+                                  ),
+                                  Container(
+                                      child: prograss == false
+                                          ? Column(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
                                               children: [
+                                                Image.memory(
+                                                  imagebytes!,
+                                                  width: MediaQuery.of(context)
+                                                      .size
+                                                      .width,
+                                                  alignment: Alignment.center,
+                                                ),
                                                 Container(
-                                                    margin:
-                                                        const EdgeInsets.all(
-                                                            50.0),
-                                                    child: const Center(
-                                                      child: Center(
-                                                        child: Text(
-                                                            'This may take a few minutes to complete',
-                                                            style: TextStyle(
-                                                                color:
-                                                                    Colors.grey,
-                                                                fontSize:
-                                                                    18.0)),
-                                                      ),
-                                                    )),
-                                                SizedBox(
-                                                    height: 50,
-                                                    child: Column(
-                                                      children: const [
-                                                        CircularProgressIndicator(),
-                                                      ],
-                                                    )),
+                                                  child: done == false
+                                                      ? Column(
+                                                          children: [
+                                                            change,
+                                                            Column(
+                                                              children: [
+                                                                // ignore: prefer_const_constructors
+                                                                Text(
+                                                                  "output type",
+                                                                  style: const TextStyle(
+                                                                      color: Colors
+                                                                          .white60,
+                                                                      fontSize:
+                                                                          16,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold),
+                                                                ),
+                                                                Wrap(
+                                                                  spacing: 3,
+                                                                  runSpacing: 3,
+                                                                  children:
+                                                                      typeList,
+                                                                ),
+                                                              ],
+                                                            ),
+                                                            namefiled,
+                                                            Container(
+                                                                child: typemap[
+                                                                            'image'] ==
+                                                                        true
+                                                                    ? imageob
+                                                                    : txtob),
+                                                            Container(
+                                                                child: _controller
+                                                                        .value
+                                                                        .text
+                                                                        .isNotEmpty
+                                                                    ? convert
+                                                                    : Text(
+                                                                        'please enter a name',
+                                                                        style:
+                                                                            defaultStyle,
+                                                                      ))
+                                                          ],
+                                                        )
+                                                      : //
+                                                      mesgimg,
+                                                ),
                                               ],
+                                            )
+                                          : //
+                                          SizedBox(
+                                              height: MediaQuery.of(context)
+                                                      .size
+                                                      .height -
+                                                  90,
+                                              child: Center(
+                                                  child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
+                                                children: [
+                                                  Container(
+                                                      margin:
+                                                          const EdgeInsets.all(
+                                                              50.0),
+                                                      child: const Center(
+                                                        child: Center(
+                                                          child: Text(
+                                                              'This may take a few minutes to complete',
+                                                              style: TextStyle(
+                                                                  color: Colors
+                                                                      .grey,
+                                                                  fontSize:
+                                                                      18.0)),
+                                                        ),
+                                                      )),
+                                                  SizedBox(
+                                                      height: 50,
+                                                      child: Column(
+                                                        children: const [
+                                                          CircularProgressIndicator(),
+                                                        ],
+                                                      )),
+                                                ],
+                                              )),
                                             )),
-                                          )),
-                              ],
-                            ),
+                                ],
+                              ),
+                      ),
                     ),
                   ),
                 )),
