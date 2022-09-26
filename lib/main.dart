@@ -724,7 +724,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if (!await launchUrl(_urlpp)) throw 'Could not launch $_urlpp';
   }
 
-  final Uri _urlnft = Uri.parse('https://rarible.com/Photo_Hash/sale');
+  final Uri _urlnft = Uri.parse('https://rarible.com/GH');
 
   void _launchUrlnft() async {
     if (!await launchUrl(_urlnft)) throw 'Could not launch $_urlnft';
