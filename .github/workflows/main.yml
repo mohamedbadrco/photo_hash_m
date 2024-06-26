@@ -19,6 +19,9 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
+      - name: dart fix --apply
+        run: dart fix --apply
+
       - name: Run tests (optional)
         run: flutter test
 
