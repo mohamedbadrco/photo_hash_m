@@ -1,0 +1,35 @@
+name: Flutter Android Build
+
+on:
+  push:
+    branches: [ main ]  # Adjust branch name(s) as needed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Consider using a runner with Android SDK pre-installed
+
+    steps:
+      - uses: actions/checkout@v3  # Clone the repository
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable  # Or specify a different channel based on your needs
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Run tests (optional)
+        run: flutter test
+
+      - name: Build APK (release mode)
+        run: flutter build apk --release
+
+      - name: Upload artifacts (optional)
+        uses: actions/upload-artifact@v3
+        with:
+          name: android-app
+          path: build/app/outputs/apk/release/app-release.apk
+
+  # Add additional jobs for signing the APK (if needed)
+  # and deploying to Play Store (refer to official documentation)
