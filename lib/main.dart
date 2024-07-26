@@ -1039,7 +1039,7 @@ Enter the number of columns or the number of charctars per
           goback
         ]));
     var mesgimg = Center(
-        child: Expanded(
+        child: Flexible(
       child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
